@@ -139,7 +139,7 @@ App = {
     var hid=$("#new-hid").val();
     var add=$("#hadd").val();
     App.contracts.insurance.deployed().then(instance=>{
-      instance.addhospital(add,web3.toHex(hid),{from:App.account});
+      return instance.addhospital(add,web3.toHex(hid),{from:App.account});
     }).then(result=>{
         alert("hospital added");
     });
